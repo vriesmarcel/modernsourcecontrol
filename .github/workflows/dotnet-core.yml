@@ -20,8 +20,9 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: dump info
+      working-directory: ${{github.workspace}}
       run: |
-        echo "${{github.workspace}}/WebApplication1/WebApplication1/WebApplication1.csproj"
+        ls -a
     - name: Install dependencies
       run: dotnet restore
     - name: Build
