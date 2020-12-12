@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 env:
-  AZURE_WEBAPP_NAME: demo-app
+  AZURE_WEBAPP_NAME: demo-app-sc
 
 jobs:
   build:
