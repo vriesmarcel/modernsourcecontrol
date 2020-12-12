@@ -24,7 +24,7 @@ jobs:
       run: |
         ls -a
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ${{github.workspace}}/WebApplication1/WebApplication1/WebApplication1.csproj
     - name: Build
       run: dotnet build ${{github.workspace}}/WebApplication1/WebApplication1/WebApplication1.csproj --configuration Release --no-restore
     - name: Test
