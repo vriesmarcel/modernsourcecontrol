@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  versionNum: '1.0.$(Rev:r)'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -43,7 +44,8 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
-    versioningScheme: 'off'
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'versionNum'
 
 - task: NuGetCommand@2
   inputs:
