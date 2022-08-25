@@ -44,10 +44,10 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
-  
+
 - task: NuGetCommand@2
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
     nuGetFeedType: 'internal'
-    publishVstsFeed: 'c7c2660f-d948-405a-ac28-227bc78cfcec/bad562fd-b805-477c-9d3a-aecb7fcec42b'
+    publishVstsFeed: '939ff42f-a6ca-41e2-a14e-921663dcd823/497341d5-fe24-41c7-932e-7d121d2a0ee3'
