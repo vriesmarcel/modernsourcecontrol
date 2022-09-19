@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 env:
-  AZURE_WEBAPP_NAME: demo-app-sc
+  AZURE_WEBAPP_NAME: sammo-app-sc
 jobs:
   build:
 
